@@ -61,10 +61,10 @@ type {
   border-style: solid;
   border-width: medium;
   width: device-width;
-  position: relative;
+  float: left;
     }
 .text-block {
-  position: relative;
+  position: absolute;
   bottom: 4px;
   right: 0px;
   background-color: black;
@@ -79,7 +79,7 @@ type {
     <title>W3.CSS</title>
 <body>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<h2 class="w3-center">Manual Slideshow4</h2>
+<h2 class="w3-center">Manual Slideshow5</h2>
 <type>
 <div class="w3-content w3-display-container">
       <img class="mySlides1" src="NealSmalley.github.io/IMG_20191017_145216.jpg" width="400" height="400">
@@ -140,6 +140,159 @@ function showDivs(n, no) {
   This is the typing</p></type>
  <type><p><img src="NealSmalley.github.io/IMG_20191017_150644.jpg" alt="Left typinghand" style="width:70%">
   This is the typing</p></type>
+  
+  <style>
+html{
+	align-items: center;
+	background-color: #31353D;
+	display: flex;
+	justify-content: center;
+	padding: 50px;
+	min-height: 100vh;
+}
+
+#Wrapper{
+	align-items: center;
+	background-color: #EEEFF7;
+	display: flex;
+	height: 500px;
+	justify-content: center;
+	width: 1000px;
+}
+
+#Slideshow{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+
+#Slider{
+	border: 20px solid #1C1D21;
+	height: 300px;
+	overflow: hidden;
+	width: 600px;
+}
+
+#Slider img{
+	height: 300px;
+	width: 600px;
+	transition: all 1s;
+}
+
+#Arrows{
+	display: flex;
+	justify-content: space-between;
+	height: 30px;
+	position: absolute;
+	width: 600px;
+}
+
+#Arrows i{
+	background-color: rgba(255, 255, 255, .25);
+	color: #1C1D21;
+	cursor: pointer;
+	height: 30px;
+	padding: 15px;
+
+	transition: background-color .5s, color .5s;
+}
+
+#Arrows i:first-of-type{ 
+	padding-right: 20px;
+}
+
+#Arrows i:last-of-type{ 
+	padding-left: 20px;
+}
+
+#Arrows i:hover{
+	background-color: rgba(28,29,33, .75);
+	color: #EEEFF7;
+}
+
+h1{
+	color: #1C1D21;
+	font-family: righteous;
+	font-size: 2.5em;
+	padding: 20px;
+}
+
+h2{
+	color: #1C1D21;
+	font-family: "Open Sans";
+	font-size: 1.5em;
+	padding: 20px;
+}
+
+#MeLink{
+  background-color: rgba(255,255,255, 0);
+  border: 10px solid #1C1D21;
+  border-radius: 80px;
+  bottom: 20px;
+  height: 80px;
+  overflow: hidden;
+  position: fixed;
+  right: 20px;
+  width: 80px;
+  z-index: 2;
+  
+  transition: background-color .5s;
+}
+
+#MeLink:hover{
+  background-color: rgba(255,255,255, .25);
+}
+
+#Me{
+  border: 10px solid #1C1D21;
+  border-radius: 80px;
+  bottom: 20px;
+  height: 80px;
+  position: fixed;
+  right: 20px;
+  width: 80px;
+  z-index: 1;
+}
+</style>
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showDivs(1, 0);
+showDivs(1, 1);
+
+function plusDivs(n, no) {
+  showDivs(slideIndex[no] += n, no);
+}
+
+function showDivs(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+<section id="Wrapper">
+	<div id="Slideshow">
+		<h1>Manual Slideshow with Navigation Arrows</h1>
+		<div id="Slider">
+			<img src="NealSmalley.github.io/IMG_20191017_150324.jpg"/>
+			<img src="NealSmalley.github.io/IMG_20191017_150518.jpg"/>
+			<img src="NealSmalley.github.io/IMG_20191017_150644.jpg"/>
+		</div>
+		<div id="Arrows">
+			<i id="Prev" class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+			<i id="Next" class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+		</div>
+		<h2>Click the arrows to progress the slideshow</h2>
+	</div>
+</section>
   
   
 <!-- Footer -->
