@@ -63,9 +63,17 @@ type {
   width: device-width;
   float: left;
     }
- b {
-  float: right;
-    }
+.text-block {
+  position: absolute;
+  bottom: 4px;
+  right: 0px;
+  background-color: black;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom:50px;
+}
 </style>
  <!--start slide-->
     <title>W3.CSS</title>
@@ -78,11 +86,11 @@ type {
       <img class="mySlides1" src="NealSmalley.github.io/IMG_20191017_150518.jpg" width="400" height="400">
       <img class="mySlides1" src="NealSmalley.github.io/IMG_20191017_150518.jpg" width="400" height="400">
       <img class="mySlides1" src="NealSmalley.github.io/IMG_20191017_150620.jpg" width="400" height="400">
-  <b><p> This is the typinghand.<p></b>
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1, 0)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1, 0)">&#10095;</button>
 </div>
-  <b><p> This is the typinghand.<p></b>
+  <div class="text-block"><p> This is the typinghand.</p></b>
+</div>
 </type>
 <div class="w3-content w3-display-container">
   <img class="mySlides2" src="NealSmalley.github.io/IMG_20191017_150620.jpg" style="width:100%">
@@ -150,7 +158,7 @@ function showDivs(n, no) {
 </head>
 <body>
 
-<h2> To Be Continued30...</h2>
+<h2> To Be Continued31...</h2>
 <p>The footer is placed at the bottom of the page.</p>
 
 <div class="footer">
