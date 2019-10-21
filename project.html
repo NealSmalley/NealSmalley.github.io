@@ -141,160 +141,205 @@ function showDivs(n, no) {
  <type><p><img src="NealSmalley.github.io/IMG_20191017_150644.jpg" alt="Left typinghand" style="width:70%">
   This is the typing</p></type>
   
-  <style>
-html{
-	align-items: center;
-	background-color: #31353D;
-	display: flex;
-	justify-content: center;
-	padding: 50px;
-	min-height: 100vh;
-}
+  <div class="slideshow-container">
+<div class="slideshow-inner">
+  <div class="mySlides fade">
+<div class="item">
+    <img  src="img_chicago.jpg"/>
+    <div class="text">test1</div>
+  </div>
+  </div>
 
-#Wrapper{
-	align-items: center;
-	background-color: #EEEFF7;
-	display: flex;
-	height: 500px;
-	justify-content: center;
-	width: 1000px;
-}
+  <div class="mySlides fade">
+	<div class="item">
+    <img  src="img_snowtops.jpg"/>
+    <div class="text">test2</div>
+  </div>
+  </div>
 
-#Slideshow{
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	overflow: hidden;
-	position: relative;
-}
+  <div class="mySlides fade">
+	<div class="item">
+    <img  src="img_chicago.jpg"/>
+    <div class="text">test3</div>
+  </div>
+  </div>
 
-#Slider{
-	border: 20px solid #1C1D21;
-	height: 300px;
-	overflow: hidden;
-	width: 600px;
-}
-
-#Slider img{
-	height: 300px;
-	width: 600px;
-	transition: all 1s;
-}
-
-#Arrows{
-	display: flex;
-	justify-content: space-between;
-	height: 30px;
-	position: absolute;
-	width: 600px;
-}
-
-#Arrows i{
-	background-color: rgba(255, 255, 255, .25);
-	color: #1C1D21;
-	cursor: pointer;
-	height: 30px;
-	padding: 15px;
-
-	transition: background-color .5s, color .5s;
-}
-
-#Arrows i:first-of-type{ 
-	padding-right: 20px;
-}
-
-#Arrows i:last-of-type{ 
-	padding-left: 20px;
-}
-
-#Arrows i:hover{
-	background-color: rgba(28,29,33, .75);
-	color: #EEEFF7;
-}
-
-h1{
-	color: #1C1D21;
-	font-family: righteous;
-	font-size: 2.5em;
-	padding: 20px;
-}
-
-h2{
-	color: #1C1D21;
-	font-family: "Open Sans";
-	font-size: 1.5em;
-	padding: 20px;
-}
-
-#MeLink{
-  background-color: rgba(255,255,255, 0);
-  border: 10px solid #1C1D21;
-  border-radius: 80px;
-  bottom: 20px;
-  height: 80px;
-  overflow: hidden;
-  position: fixed;
-  right: 20px;
-  width: 80px;
-  z-index: 2;
+  <div class="mySlides fade">
+	<div class="item">
+    <img  src="img_ny.jpg"/>
+    <div class="text">Pelican</div>
+  </div>
+  </div>
   
-  transition: background-color .5s;
+  </div>
+
+
+  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+
+
+<div style='text-align: center;'>
+  <span class="dot" onclick='currentSlide(1)'></span>
+  <span class="dot" onclick='currentSlide(2)'></span>
+  <span class="dot" onclick='currentSlide(3)'></span>
+  <span class="dot" onclick='currentSlide(4)'></span>
+</div>
+<style>
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto
 }
 
-#MeLink:hover{
-  background-color: rgba(255,255,255, .25);
+.mySlides {
+  display: flex;
+  width: 800px;
+  align-items:center;
+  border: solid 1px black;
+     
 }
 
-#Me{
-  border: 10px solid #1C1D21;
-  border-radius: 80px;
-  bottom: 20px;
-  height: 80px;
-  position: fixed;
-  right: 20px;
-  width: 80px;
-  z-index: 1;
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #222428;
+    font-weight: bold;
+    font-size: 30px;
+    transition: .6s ease;
+    border-radius: 0 3px 3px 0
+}
+
+.next {
+    right: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev {
+    left: -50px;
+    border-radius: 3px 3px 3px 3px
+}
+
+.prev:hover,
+.next:hover {
+    color: #f2f2f2;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+.item {
+  display: flex;
+  width: 800px;
+  align-items: center;
+}
+.item .text {
+    font-size: 15px;
+    position: relative;
+    text-align: center;
+    width: 50%;
+}
+.item img {
+  width: 50%
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease
+}
+.active,
+.dot:hover {
+    background-color: #717171
 }
 </style>
 <script>
-var slideIndex = [1,1];
-var slideId = ["mySlides1", "mySlides2"]
-showDivs(1, 0);
-showDivs(1, 1);
+var slideIndex = 1;
 
-function plusDivs(n, no) {
-  showDivs(slideIndex[no] += n, no);
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+  
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+  
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+  
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
 }
 
-function showDivs(n, no) {
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
   var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) {slideIndex[no] = 1}
-  if (n < 1) {slideIndex[no] = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
-  x[slideIndex[no]-1].style.display = "block";  
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
 }
 </script>
-<section id="Wrapper">
-	<div id="Slideshow">
-		<h1>Manual Slideshow with Navigation Arrows</h1>
-		<div id="Slider">
-			<img src="NealSmalley.github.io/IMG_20191017_150324.jpg"/>
-			<img src="NealSmalley.github.io/IMG_20191017_150518.jpg"/>
-			<img src="NealSmalley.github.io/IMG_20191017_150644.jpg"/>
-		</div>
-		<div id="Arrows">
-			<i id="Prev" class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
-			<i id="Next" class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
-		</div>
-		<h2>Click the arrows to progress the slideshow</h2>
-	</div>
-</section>
-  
-  
 <!-- Footer -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -311,7 +356,7 @@ function showDivs(n, no) {
 </head>
 <body>
 
-<h2> To Be Continued33...</h2>
+<h2> To Be Continued34...</h2>
 <p>The footer is placed at the bottom of the page.</p>
 
 <div class="footer">
