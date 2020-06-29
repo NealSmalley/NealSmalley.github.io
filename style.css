@@ -1,0 +1,130 @@
+.navigation-wrapper{
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    /*float:left;*/
+    /*align-items:center;*/
+}
+.navigation-wrapper img{
+    width: 150px;
+    height: 40px;
+}
+.navigation-wrapper > .middle{
+    /*justify-content:space-between;*/
+    align-items: center;
+    
+}
+.navigation-wrapper > .middle p{
+    justify-content: space-between;
+    float:left;
+    width: 80px;
+    text-align: center;
+    color: white;
+    padding-bottom: 8px;
+}
+.navigation-wrapper > .middle p spark{
+    color: #858585;
+    padding-left: 20px;
+}
+.navigation-wrapper > .middle p i{
+    color: #858585;
+}
+.navigation-wrapper > .create p{
+    display:flex;
+    float: right;
+    color:white;
+    background-color:#5e5d5d;
+    text-align:center;
+    padding: 5px 20px; 
+    margin-left: 500px;
+}
+.navigation-wrapper > .create p i{
+    color:rgb(11, 177, 11);
+}
+
+.navigation-wrapper >.search-icon i{
+    color:rgb(150, 151, 150);
+    padding:20px;
+}
+.navigation-wrapper >.accounts p{
+    display:flex;
+    color:white;
+    background-color:#5e5d5d;
+    text-align:center;
+    padding: 10px 20px; 
+    margin:10px;
+}
+.feature-wrapper{
+    /*float:left;*/
+    height: 80%;
+    width:100%;
+    background-color: #3f3f3f;
+}
+.feature-wrapper >.passage {
+    font-family: 'Telefon Black', Sans-Serif;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    color:white;
+    text-align: left;
+    font-size: 2rem;
+    /*width: 60%;*/
+    padding-left:5%;
+}
+.feature-wrapper >.passage  > .image img {
+    width:80%;
+    padding-left: 20%;
+    padding-top: 16%;
+}
+.feature-wrapper >.image img {
+    float:right;
+    height:50%;
+    width:30%;
+}
+
+.feature-wrapper >.passage p i {
+    color:rgb(243, 228, 18);
+}
+.feature-wrapper >.passage h3{
+    float:left;
+    color:black;
+    background-color:rgb(11, 177, 11);
+    text-align:center;
+    padding: 20px 10px;
+    margin:20px;
+}
+.feature-wrapper >.passage h4{
+    float:left;
+    color:white;
+    background-color:black;
+    text-align:center;
+    padding: 20px 10px;
+    margin:20px;
+}
+.footer-wrapper{
+    /*display:flex;*/
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(86, 86, 90);
+}
+.footer-wrapper > .segment{
+    justify-content: space-between;
+    /*width: 40%;*/
+    border: 1px solid white;
+}
+.footer-wrapper > .segment p {
+    text-align: center;
+    color: white;
+    
+}
+.spacer{
+    background-color: black;
+    width:100%;
+    height: 60px;
+    border: 0px;
+}
+p,h3,h4{
+    font-family: 'Telefon Black', Sans-Serif;
+}
