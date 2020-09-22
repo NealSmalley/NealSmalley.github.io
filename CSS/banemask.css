@@ -1,0 +1,105 @@
+body {
+    background: gray;
+     color: white;
+      font-family: Helvetic Neue, Helvetica, Arial, sans-serif;
+     margin: 0; padding: 0; 
+    } /* HEADER */ 
+    header {
+         background-color: black; 
+         background-image: url("img/coronavirus.jpg");
+         background-size: 100%; 
+         background-position: center; 
+         height: 500px; 
+         padding: 20px;
+         text-align: center; 
+        } 
+    header a { 
+        color: white;
+        text-decoration: none;
+         text-transform: uppercase;
+          margin-top: 40px;
+         }
+    header .mobile{ 
+        display: none; 
+    } 
+    header .logo a {
+         background-image: url("img/nealslogo.jpg");
+         background-size: 150px; 
+         background-repeat: no-repeat;
+         display: inline-block;
+         height: 100px;
+         position: relative;
+         text-indent: -99999999px;
+         top: -30px;
+         width: 150px; 
+        } 
+        nav ul { 
+        margin: 0px;
+        padding: 0px;
+        list-style-type: none;
+     } /* nav ul li { display: inline-block; margin-right: 20px; } */
+        nav ul li {
+        float: left;
+        margin-right: 20px;
+        width: 200px;
+        height: 40px;
+        line-height:40px;
+        text-align: center;
+        font-size: 20px;
+    } nav ul li a{
+        text-decoration: none;
+        color: white;
+        display: block; 
+    } /*experimental code a:hover { background-color: #111; padding: 20px; } */ 
+    center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav ul li a:hover { 
+        background-color: green;
+     } nav ul li ul li { 
+         display: none; 
+        } nav ul li:hover ul li {
+             display: block;
+             height: 100px; 
+            } /*RESPONSIVE RULES*/ /*@media screen and (max-width: 502px){ header{ height: 200px; background-position: 0 -30px; } header .mobile{ display: inline-block; } header .desktop{ display: none; } } @media screen and (max-width: 300px){ header { height: 200px; background-position: 0 -0px; } } */ 
+            /*FEATURES*/ 
+            .item1 { grid-area: bane; }
+            .item2 { grid-area: banetext; }
+            .item3 { grid-area: vader; }
+            .item4 { grid-area: vadertext; }
+            .item5 { grid-area: bunny; }
+            .item6 { grid-area: bunnytext; }
+            .features { 
+               display: grid;
+               grid-template-areas: 'bane bane banetext banetext banetext banetext'
+                                    'vader vader vadertext vadertext vadertext vadertext'
+                                    'bunny bunny bunnytext bunnytext bunnytext bunnytext';
+               grid-gap: 10px;
+               background-color: black;
+               padding: 10px;
+             } 
+             .features img {
+                 width: 100%;
+             }
+             .features p {
+                color: black;
+                padding: 20px;
+            }
+             .features > div {
+                background-color: rgba(255,255,255, 0.8);
+                text-align: center;
+                padding: 20px 0;
+                font-size:15px;
+             }
+
+             /*RESPONSIVE RULES*/ /*@media screen and (max-width: 502px){ .features{ display: block; } }*/ 
+            /*FOOTER*/ 
+            footer { 
+                background: black;
+                 color: blue; 
+                 font-size: 12px;
+                 padding: 10px 20px;
+                 text-align:center 
+                } /*make sure when they are both max-width the one with more pixels goes first*/ /*@media screen and (max-width: 1200px) { .features { background: pink; } } @media screen and (max-width: 800px) { .features { background: red; } } background-color: #f3f3f3; font-family: arial; } .article-container { width: 900px; background-color: #fff; padding: 30px; } .article-box { padding-bottom: 30px; width: 100%; } input { padding: 0px 20px; width: 300px; height: 40px; font-size:22px; } button { width: 100px; height: 44px; font-size:22px; }

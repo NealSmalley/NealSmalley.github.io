@@ -1,0 +1,216 @@
+h1 {
+ color: orange;
+ margin-left: 50%;
+}
+
+body {
+ background: #ffffff;
+ font-family: Helvetic Neue, Helvetica, Arial, sans-serif;
+ border-left: 100px;
+} /* HEADER */ 
+#header {
+    background-color: green;
+}
+
+#header h1{
+    color:white;
+}
+
+.bigheaderFont {
+    display: none;
+    padding: 0px;
+}
+
+.bigheaderFont .headerFont {
+ display: flex;
+ background: black;
+ height: 50px;
+ width: 100%;
+}
+
+.bigheaderFont .headerFont a{
+    float: left;
+    width: 20%;
+    padding-top: 15px;
+    padding-left: 15%;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.bigheaderFont .bodyleftFont{
+    float: left;
+    background-color: green;
+    color: white;
+    width: 70%;
+    height: 600px;
+    padding-top: 130px;
+    text-align: center;
+}
+
+.bigheaderFont .bodyleftFont:hover{
+    color: orange;
+    letter-spacing: 2px;
+}
+
+.bigheaderFont .bodyrightFont{
+    display: inline-block;
+    background-color: rgb(62, 68, 62);
+    color: white;
+    width: 30%;
+    height: 600px;
+    padding-top: 130px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bigheaderFont .bodyrightFont:hover{
+    color: orange;
+    letter-spacing: 2px;
+}
+
+.bodyleftFlatDesign {
+    background-image: url("flat design background.jpg");
+}
+
+.bigheaderRealism {
+    display: none;
+    padding: 0px;
+}
+
+.bigheaderRealism .headerRealism {
+    display: flex;
+    background: black;
+    height: 50px;
+    width: 100%;
+}
+
+.bigheaderRealism .headerRealism a{
+    float: left;
+    width: 20%;
+    padding-top: 15px;
+    padding-left: 15%;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.bigheaderRealism .bodyRealism {
+    display: flex;
+    float: left;
+    padding-top: 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.bigheaderRealism .bodyRealism img {
+    width: 33.3%;
+}
+
+
+.bigheaderRealism .bodyRealism p{
+    background-color: rgb(62, 68, 62);
+    color: white;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20%;
+    margin: 0px;
+    width: 33.3%;
+}
+
+.bodyleftFreehand {
+    background-image: url("img/Freehand.jpg");
+}
+
+header {
+     background-image: url("img/arc_react_core.jpg");
+     background-size: 100%; 
+     background-position: center; 
+     height: 500px; 
+     padding: 20px;
+     text-align: center; 
+    } 
+header a { 
+     color: white;
+     text-decoration: none;
+     text-transform: uppercase;
+      margin-top: 40px;
+     }
+header .mobile{ 
+    display: none; 
+} 
+header .logo a {
+     background-image: url("img/nealslogo.jpg");
+     background-size: 150px; 
+     background-repeat: no-repeat;
+     display: inline-block;
+     height: 100px;
+     position: relative;
+     text-indent: -99999999px;
+     top: -30px;
+     width: 150px; 
+    } 
+    nav ul { 
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+ } /* nav ul li { display: inline-block; margin-right: 20px; } */
+    nav ul li {
+    float: left;
+    margin-right: 20px;
+    width: 200px;
+    height: 40px;
+    line-height:40px;
+    text-align: center;
+    font-size: 20px;
+}
+    nav ul li test {
+    column-count: 2;
+    float: left;
+    margin-top: 40px;
+}
+    nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: block; 
+} /*experimental code a:hover { background-color: #111; padding: 20px; } */ 
+nav ul li a:hover { 
+    background-color: green;
+ } nav ul li ul li { 
+     display: none; 
+    } nav ul li:hover ul li {
+         display: block;
+         height: 100px; 
+        } /*RESPONSIVE RULES*/ /*@media screen and (max-width: 502px){ header{ height: 200px; background-position: 0 -30px; } header .mobile{ display: inline-block; } header .desktop{ display: none; } } @media screen and (max-width: 300px){ header { height: 200px; background-position: 0 -0px; } } */ 
+        /*FEATURES*/ 
+        .features { 
+            background: white;
+            color: blue;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        } 
+        .features figure { 
+            background: auto;
+            margin: auto;
+            text-align: center;
+            text-transform: uppercase;
+            width: 200px; 
+        } 
+        .features figure img { 
+            border: 1px solid white;
+            border-radius: 50%;
+            box-shadow: black 0px 0px 50px;
+            width: 200px; 
+        } /*RESPONSIVE RULES*/ /*@media screen and (max-width: 502px){ .features{ display: block; } }*/ 
+        /*FOOTER*/ 
+        footer { 
+            background: black;
+             color: blue; 
+             font-size: 12px;
+             padding: 10px 20px;
+             text-align:center 
+            } /*make sure when they are both max-width the one with more pixels goes first*/ /*@media screen and (max-width: 1200px) { .features { background: pink; } } @media screen and (max-width: 800px) { .features { background: red; } } background-color: #f3f3f3; font-family: arial; } .article-container { width: 900px; background-color: #fff; padding: 30px; } .article-box { padding-bottom: 30px; width: 100%; } input { padding: 0px 20px; width: 300px; height: 40px; font-size:22px; } button { width: 100px; height: 44px; font-size:22px; }
